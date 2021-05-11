@@ -8,7 +8,7 @@ class CreateOrders < ActiveRecord::Migration[6.1]
       t.string :neighborhood
       t.string :number
       t.string :complement
-      t.integer :status
+      t.integer :status, default: 0
       t.references :restaurant, null: false, foreign_key: true
 
       t.timestamps
